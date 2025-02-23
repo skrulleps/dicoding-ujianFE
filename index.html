@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>E-Library</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,17 @@
         </div>
         <div class="nav-list">
             <nav>
-                <a href="#about">About Us</a>
-                <a href="#visi-misi">Our Mission</a>
-                <a href="#news">News</a>
-                <a href="#books">Books</a>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#visi-misi">Our Mission</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#books">Books</a></li>
+                </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div id="content">
+        <div id="content" class="content">
             <!-- Artikel nya -->
             <article class="best-books">
                 <div class="best-books-sign">
@@ -101,38 +103,47 @@
                         <p>Short description about Book 3.</p>
                     </div>
                     <div class="book-card">
+                        <img src="assets/img/book2.jpg" alt="Book 2">
+                        <h3>Book Title 2</h3>
+                        <p>Short description about Book 2.</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="assets/img/book3.jpg" alt="Book 3">
+                        <h3>Book Title 3</h3>
+                        <p>Short description about Book 3.</p>
+                    </div>
+                    <div class="book-card">
                         <img src="assets/img/book4.jpg" alt="Book 3">
                         <h3>Book Title 4</h3>
                         <p>Short description about Book 4.</p>
                     </div>
                 </div>
             </article>
-
-            <!-- News Section -->
-            <article class="container-news" id="news">
-                <div class="news-section">
-                    <h2>Latest News</h2>
-                    <article class="news-article">
-                        <h3>News Title 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                    </article>
-                    <article class="news-article">
-                        <h3>News Title 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                    </article>
-                    <article class="news-article">
-                        <h3>News Title 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                    </article>
-                </div>
-            </article>
-    
-            
-               
-
         </div> 
+
+        <!-- News Section -->
+        <aside class="container-news" id="news">
+            <div class="news-section">
+                <h2>Latest News</h2>
+                <article class="news-article">
+                    <h3>News Title 1</h3>
+                    <img src="assets/img/news1.jpg" alt="News 1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                </article>
+                <article class="news-article">
+                    <h3>News Title 2</h3>
+                    <img src="assets/img/news2.jpg" alt="News 2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                </article>
+                <article class="news-article">
+                    <h3>News Title 3</h3>
+                    <img src="assets/img/news3.jpg" alt="News 3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                </article>
+            </div>
+        </aside>
         
-        <aside>
+        <!-- <aside>
             <div class="social-media">
                 <ul>
                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
@@ -141,7 +152,7 @@
                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 </ul>
             </div>
-        </aside>
+        </aside> -->
         
 
     </main>

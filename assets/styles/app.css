@@ -34,6 +34,7 @@ header.header-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 50px;
     position: sticky;
     top: 0;
     z-index: 4;
@@ -42,7 +43,7 @@ header.header-container{
 
 .header-container .logo img{
     height: 50px;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .header-container .logo {
@@ -51,7 +52,11 @@ header.header-container{
 }
 
 .nav-list nav{
-    margin-right: 20px;
+    margin-right: 0px;
+}
+.nav-list nav ul{
+    display: flex;
+    gap: 2.5rem;
 }
 nav {
     display: flex;
@@ -60,6 +65,8 @@ nav {
    
 }
 nav a {
+    font-size: 16px;
+    font-weight: bold;
     color: #3b2b1e;
     text-decoration: none;
     font-weight: bold;
@@ -82,10 +89,15 @@ nav a:hover{
 
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    width: 90%;
+}
+
+#content{
+    flex-basis: 80%;
+    margin-top: 35px;
 }
 
 article.best-books {
@@ -227,15 +239,9 @@ article.best-books .best-books-title p{
     line-height: 1.7;
 }
 
-.best-books-container {
+main.content .best-books-container {
     display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-wrap: nowrap;
-    gap: 20px;
-    margin-top: 40px;
-    margin-left: 120px;
-    width: 80%;
+    
 }
 
 .book-container {
@@ -244,8 +250,9 @@ article.best-books .best-books-title p{
     /* align-items: center; */
     gap: 35px;
     margin-top: 40px;
-    width: 80%;
-    /* justify-content: center; */
+    margin-bottom: 20px;
+    /* width: 80%; */
+    justify-content: center;
 }
 .book-card {
     background: white;
@@ -322,17 +329,20 @@ article.best-books .best-books-title p{
     padding: 15px;
     border-radius: 5px;
 }
+
 aside {
-    background-color: #4a4a4a;
     color: white;
     padding: 15px;
     text-align: center;
     width: 25%;
 }
-aside a {
-    color: white;
-    margin: 5px;
-    font-size: 20px;
+
+aside.container-news{
+    flex-basis: 20%;
+}
+
+aside.container-news .news-section .news-article img{
+    width: 100%;
 }
 
 footer {
@@ -340,25 +350,25 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    width: 97%;
+    width: 100%;
     margin: 0;
 }
 
-main aside {
+/* main aside {
     position: fixed;
     inset-block: auto;
     inset-inline-end: 0;
     right: 0;
-    width: 50px; /* Sesuaikan dengan kebutuhan */
-    background: black; /* Hapus background jika tidak diperlukan */
+    width: 50px; 
+    background: black; 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; /* Biarkan menyesuaikan kontennya */
-    padding: 10px 0; /* Tambahkan padding jika diperlukan */
-}
+    height: auto; 
+    padding: 10px 0; 
+} */
 
-
+/* 
 main aside .social-media {
     height: auto;
     display: flex;
@@ -393,7 +403,7 @@ main aside .social-media li a {
 
 main aside .social-media li a:hover {
     color: #89b0d9;
-}
+} */
 
 .news-article:hover{
     background-color: #89b0d9;
@@ -403,20 +413,38 @@ main aside .social-media li a:hover {
 @media screen and (max-width: 768px) {
     header.header-container {
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     header.header-container .nav-list ul {
         flex-wrap: wrap;
         column-gap: 0.5rem;
+        justify-content: center;
     }
 
+    .header-container .logo{
+        justify-content: center;
+    }
     main {
         padding: 1rem 3rem;
+        display: flex;
+        flex-direction: column;
     }
 
-    main .content {
+    main .content .best-books {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    main .content .about-us .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .content .about-us .about-content p{
+        width: 100%;
+        padding: 0;
     }
 
     main .content .content-description .title {
@@ -427,21 +455,9 @@ main aside .social-media li a:hover {
         font-size: 1rem;
     }
 
-    main .content .content-image {
-        order: -1;
+    aside.container-news {
+        width: 100%;
     }
 
-    main aside .social-media ul{
-        flex-wrap: wrap;
-        display: grid;
-        
-    }
-
-    main.best-books-container .book-container .book-card{
-        flex-wrap: wrap;
-        column-gap: 0.5rem;
-        display: grid;
-        grid-template-columns: (2);
-        grid-template-rows: (2);
-    }
+    
 }
